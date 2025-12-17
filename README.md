@@ -1,7 +1,7 @@
 # Faces-To-Cubemap
 Simple python tool that turns 6 faces (.png) from a .zip file into a single cubemap texture (.png)
 
-# ZIP → Flax Cubemap Tool
+# ZIP → Cubemap Tool
 
 A simple python tool (tested in Python 3.13) that converts a ZIP archive containing six cubemap face images into a single cubemap texture using a horizontal cross layout.
 
@@ -69,35 +69,19 @@ Final image resolution will be:
 ```
 (width × 4) by (height × 3)
 ```
-
-This layout is supported directly by **Flax Engine** when importing cubemaps.
-
 ---
 
 ## Usage
 
 ```bash
-python zip_to_flax_cubemap.py input.zip output.png
+python zip_to_cubemap.py input.zip output.png
 ```
 
 ### Example
 
 ```bash
-python zip_to_flax_cubemap.py skybox.zip skybox_cubemap.png
+python zip_to_cubemap.py skybox.zip skybox_cubemap.png
 ```
-
----
-
-## Importing into Flax Engine
-
-1. Drag the generated PNG into your Flax project
-2. Select the texture asset
-3. Set:
-   - **Texture Type:** `Cube Texture`
-   - **Layout:** `Horizontal Cross`
-4. Save the asset
-
-The cubemap is now ready for use in skyboxes, reflections, or lighting.
 
 ---
 
